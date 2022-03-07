@@ -1,0 +1,215 @@
+:root{
+    --main-color: #00192c;
+    --white-alpha-25: rgba(255, 255, 255, 0.25);
+    --white-alpha-40: rgba(255, 255, 255, 0.40);
+    --backdrop-filter-blur: blur(5px);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #00192c;
+    font-family: poppins;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    padding: 5vh 15px;
+}
+body::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00192c;
+    z-index: -1;
+    opacity: 0.12;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+section{
+    background-color: #00192c;
+    min-height: 90vh;
+    border-radius: 30px;
+}
+button{
+    font-family: inherit;
+    user-select: none;
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.container{
+    padding: 0 40px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.judul{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.judul h2{
+    font-size: 40px;
+    text-transform: capitalize;
+    color: rgb(255, 176, 5);
+}
+
+.about-gambar{
+    width: 50%;
+    padding: 0 15px;
+}
+.about-text{
+    width: 50%;
+    padding: 0 15px;
+}
+.about-gambar .box-gambar{
+    background-color: var(--white-alpha-25);
+    max-width: 380px;
+    border: 1px solid var(--white-alpha-40);
+    margin: auto;
+    border-radius: 10px;
+}
+.about-tab{
+    margin-top: 20px;
+}
+.about-tab .tab-item{
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.about-tab .tab-item:last-child{
+    margin: 0;
+}
+.about-tab .tab-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+.about-tab .tab-item:hover::before{
+    width: 100%;
+}
+.about-tab .tab-item.active::before{
+    width: 100%;
+    background-color: rgb(255, 176, 5);
+}
+.about-tab .tab-item.active{
+    color: rgb(255, 176, 5);
+    opacity: 1;
+    cursor: auto;
+}
+.about-text .timeline{
+    position: relative;
+}
+.about-text .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: rgb(255, 176, 5);
+}
+.about-text .tab-konten{
+    padding: 40px 0;
+    display: none;
+}
+.about-text .tab-konten.active{
+    display: block;
+}
+.about-text .timeline-item{
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+.about-text .timeline-item::before{
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: rgb(255, 176, 5);
+    left: 0;
+    top: 16px;
+}
+.about-text .timeline-item:last-child{
+    margin-bottom: 0;
+}
+.about-text .timeline-item .date{
+    display: block;
+    color: rgb(255, 176, 5);
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4 span{
+    font-weight: 400;
+}
+.home img{
+    width: 3.5%;
+    height: 7%;
+    margin-left: 91%;
+    position: absolute;
+    cursor: pointer;
+}
+footer{
+    background: var(--white-alpha-40);
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #00192c;
+}
+.footer-konten{
+    text-align: center;
+}
+.footer-konten h3{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+.footer-bawah{
+    background: var(--white-alpha-25);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bawah p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
